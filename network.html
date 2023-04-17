@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Face App</title>
+    <link rel="stylesheet" type="text/css" href="styles/style2.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main class="container">
+      <nav class="navbar">
+        <div class="logo">
+          <img src="images/face-logo.jpg" alt="Face Recognition App Logo" />
+          <p>faceApp</p>
+        </div>
+        <ul class="nav-links">
+          <input type="checkbox" id="checkbox_toggle" />
+          <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+          <div class="menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="network.html">Network</a></li>
+            <li><a href="/account.html">Account</a></li>
+            <li><a href="/logout.html">Logout</a></li>
+          </div>
+        </ul>
+      </nav>
+
+      <section class="form-page network-container">
+        <h1>Network Credential</h1>
+        <p>
+          Please enter the username and password of the network you are
+          connected to.
+        </p>
+        <form action="" method="get" id="network-form" class="forms">
+          <label for="wifi-ssid">Enter WiFi SSID</label>
+          <input
+            type="text"
+            name="wifi-ssid"
+            class="wifi-ssid"
+            id="wifi-ssid"
+          />
+          <label for="wifi-key">Enter WiFi Password</label>
+          <input
+            type="password"
+            name="wifi-key"
+            class="wifi-key"
+            id="wifi-key"
+          />
+          <button id="network-submit-btn" class="network-submit-btn">
+            Submit
+          </button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

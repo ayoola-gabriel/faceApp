@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="data:image/png;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QAiRXhpZgAATU0AKgAAAAgAAQESAAMAAAABAAEAAAAAAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAAUABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD2v/gvR/wUN+LHw5+Odr8Hfhn4m1T4ZaTZ2NpPqPiG0T7Lda3qFzudLGG8ZlW3jji8pmZHVmknVWKoCTY/4IKf8FBPiv8AFT4y6l8H/iZ4j1H4mab/AGddXmn+JblftN1o17bvGZLCa8RnW4jkjaRldnZleB1DOhUr4h/wX4/ZKn+CH7dt18QNS1i3utD+MMjalYnU3WGz0l7eysrO6DSmZZDNBshuLcRDf+9KqkoSRTZ/4N+/2TZvjH+3FH8RtP1i1ttE+Dri7uhpjCey1mS6sL6yg2y+c0gmlEstzOJRvzEiskYZFH1XssP/AGdey2ve2t/XffQ+RVbEf2pytve1r6cvpttqfqX+3Z/wSq+Gv/BTOXwtN8SNQ8ZRxeDUuY9PttH1RbSDdceUZJHUxvufESKDngZHc5X9hb/glj8N/wDgmXF4qPw31DxlLb+Mvs32+11jVFu4Fe383ZJGojTa5ErKx5yAo/hFFFeO6s/qvJd27dN+x7nsYfW/acqv3trt3P/Z">
+    <title>Stream</title>
+    <style>
+      *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+    body {
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+    .container {
+        width:100%;
+        height:100vh;
+        } 
+</style>
+  </head>
+  <body>
+    <main class="container"></main>
+
+      <figure class="streaming">
+        <div id="stream-container">
+          <img id="stream" src="" />
+        </div>
+      </figure>
+    <script>
+let baseHost = location.origin;
+let streamUrl = baseHost + ":81";
+
+window.addEventListener("DOMContentLoaded", () => {
+    
+    let img = document.getElementById("stream");
+    img.src = `${streamUrl}/streamtoscreen`;
+  img.style.width = "100%";
+  img.style.borderRadius = "10px"; 
+});
+
+    </script>
+  </body>
+</html>

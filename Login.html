@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-image: linear-gradient(45deg, rgb(255, 255, 255), #fff, #fff, rgb(141, 207, 158), rgb(123, 190, 192), rgb(130, 129, 180),
+                    rgb(160, 103, 132), rgb(145, 70, 74), rgb(122, 55, 55));
+            background-size: 2000% 2000%;
+            background-repeat: no-repeat;
+            animation: gradient 20s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .logo {
+            display: flex;
+            padding: 5px;
+            margin-right: 5px;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .logo>img {
+            width: 20%;
+            margin-right: 5px;
+            border-radius: 5px;
+        }
+
+        .logo>p {
+            font-size: 1.2em;
+        }
+
+        /* STYLES FOR OTHER PAGES */
+        .btn, .form-control {
+            /* margin:15px 0px; */
+            padding: 11px;
+            border-radius: 5px;
+            font-size: 1.2em;
+            border: none;
+            background-color: rgb(27, 81, 83);
+            color: white;
+            margin: 10px;
+        }
+
+        .btn:hover {
+            transition: 0.5s ease;
+            background-color: black;
+            color: gold;
+        }
+
+        .login-center {
+            width: 80%;
+            padding: 20px;
+            max-width: 400px;
+            /* margin: 20px auto; */
+            background-color: rgba(255, 255, 255, 0.397);
+            height: 250px;
+            border-radius: .25rem !important;
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+            display: flex;
+            flex-direction: column; 
+        }
+
+        /* END OF LOG IN PAGE STYLES */
+
+
+        @media (max-width: 768px) {
+            .logo>p {
+                font-size: 1em;
+            }
+        }
+
+        .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        background-color: teal;
+        color: #fff;
+        border-radius: 1px;
+       }
+
+       .login-container{
+            display: flex;
+            justify-content: center;
+            margin: 15vh 0px;
+       }
+       
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        //we will auto-triggering js function
+        //to refresh once after first load
+        (function () {
+            if (window.localStorage) {
+                //check if reloaded once already 
+                if (!localStorage.getItem('firstLoad')) {
+                    //if not reloaded once, then set firstload to true
+                    localStorage['firstLoad'] = true;
+                    //reload the webpage using reload() method
+                    window.location.reload();
+                }
+                else
+                    localStorage.removeItem('firstLoad');
+            }
+        })();
+
+
+    </script>
+
+<body>
+    <!-- Start: login form -->
+    <div class="container">
+        <div class = "navbar">
+        <div class="logo">
+            <img src="data:image/png;base64,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" alt="face logo" />
+            <p>faceApp</p>
+          </div>
+        </div>
+
+        <div class = "login-container">
+            <form class="login-center">
+            <input class="form-control" type="text" placeholder="Username" name="USERNAME">
+            <input class="form-control" type="password" placeholder="Password" name="PASSWORD">
+            <button class="btn" type="submit">Login</button>
+        </form>
+        </div>
+    </div><!-- End: login form -->
+</body>
+
+</html>

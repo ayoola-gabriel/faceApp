@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face App</title>
+    <link rel="stylesheet" type="text/css" href="styles/style2.css">
+    <script src="app.js" defer></script>
+    </head>
+    <body>
+    
+    <main class="container">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/face-logo.jpg" alt="Face Recognition App Logo">    
+                <p>faceApp</p>
+            </div>
+            <ul class="nav-links">
+              <input type="checkbox" id="checkbox_toggle" />
+              <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+                <div class="menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="network.html">Network</a></li>
+                <li><a href="/account.html">Account</a></li>
+                <li><a href="/logout.html">Logout</a></li>
+              </div>
+            </ul>
+          </nav>
+        
+        <section class="form-page account-container">
+          <h1>Change Your Log in Details</h1>
+          <p>Please enter the username and the new password you wish to use</p>
+          <form action="" method = "get" id="account-form" class="forms">
+            <label for="username">Enter Username</label>
+            <input type="text" name="user" class="user" id="user">
+            <label for="pass1">Enter New Password</label>
+            <input type="password" name="pass1" class="pass1" id="pass1">
+            <label for="pass2">Confirm New Password</label>
+            <input type="password" name="pass2" class="pass2" id="pass2">
+            <button id="account-submit-btn" class="account-submit-btn">Submit</button>
+          </form>
+        </section>
+
+    </main>
+</body>
+</html>
